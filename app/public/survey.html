@@ -235,7 +235,7 @@
                 ]
             }
             console.log(newUser);
-            $.post('../data/friends.js', newUser).then(function(){
+            $.post(path.join(__dirname,'../data/friends'), newUser).then(function(){
                 console.log('survey.html', data);
                 friends.push(newUser);
             });
