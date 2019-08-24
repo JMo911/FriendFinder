@@ -237,6 +237,7 @@
             console.log(newUser);
             $.post('../data/friends.js', newUser).then(function(){
                 console.log('survey.html', data);
+                friends.push(newUser);
             });
 
         });
