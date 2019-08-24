@@ -12,27 +12,6 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// app.get('/survey', function (request, response) {
-//     response.sendFile(path.join(__dirname, '/app/public/survey.html'))
-// });
-  
-// app.get('/', function (request, response) {
-//     response.sendFile(path.join(__dirname, '/app/public/home.html'))
-// })
-
-// app.get("/api/friends", function(request, response) {
-//     return response.json(friends);
-// });
-
-// app.post("/api/friends", function(request, response){
-//     const newFriend = request.body; 
-//     console.log(newFriend);
-
-//     friends.push(newFriend);
-  
-//     response.json(newFriend);
-// });
-
 require('./app/routing/htmlRoutes.js')(app);
 require('./app/routing/apiRoutes.js')(app);
 
