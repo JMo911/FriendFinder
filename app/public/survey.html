@@ -12,8 +12,10 @@
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
+  <!-- <script type="text/javascript" src="../data/friends.js"></script> -->
 </head>
 <body>
+        <a href='/home'><button type="submit" class="btn btn-primary" id='homebutton'>Home</button></a>
 
     <!--START OF FORM-->
     <form class='col-sm-10 offset-sm-1'>
@@ -217,6 +219,7 @@
     <!--My JS-->
     <script>
         // const path = require('path');
+        // const friends = require('./friends');
         $("#submitbutton").on('click', function(event){
             event.preventDefault();
             var newUser = {
@@ -237,9 +240,26 @@
             }
             console.log(newUser);
             $.post('/api/friends', newUser).then(function(data){
-                console.log('survey.html', data);
+                console.log(data);
                 friends.push(newUser);
             });
+            // function makeMatch(){
+            //     friends.forEach(element => {
+            //         console.log(element);
+            //     });
+            // };
+
+
+
+            // function makeAMatch(){
+            //     $.ajax({
+            //         'url': '../data/friends.js',
+            //         'method': 'GET'
+            //     }).then(function(response){
+            //         console.log(response);
+            //     });
+            // };
+            // makeAMatch();
 
         });
     
