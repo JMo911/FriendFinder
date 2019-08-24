@@ -88,11 +88,7 @@ function findMatch(name) {
 
 
             //find least diff and return that user
-            // console.log(leastDiff);
-            
-
         }
-        // console.log(leastDiff);
 
      })
      console.log(leastDiff);
