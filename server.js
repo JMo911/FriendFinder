@@ -29,7 +29,7 @@ app.post("/api/friends", function(request, response){
 
     friends.push(newFriend);
   
-    res.json(newFriend);
+    response.json(newFriend);
 });
 
 

@@ -216,7 +216,7 @@
 
     <!--My JS-->
     <script>
-        const path = require('path');
+        // const path = require('path');
         $("#submitbutton").on('click', function(event){
             event.preventDefault();
             var newUser = {
@@ -236,7 +236,7 @@
                 ]
             }
             console.log(newUser);
-            $.post(path.join(__dirname,'../data/friends'), newUser).then(function(){
+            $.post('/api/friends', newUser).then(function(data){
                 console.log('survey.html', data);
                 friends.push(newUser);
             });
