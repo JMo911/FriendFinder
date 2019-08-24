@@ -70,23 +70,32 @@ function findMatch(name) {
 
     
      friends.forEach(function(element){
+         //set least diff at max possible total diff
+         let leastDiff=50;
 
         if (element.name !== name) {
             let comparisonArray = element.responses;
-            //  console.log(comparisonArray);
             //for each comparison array i need to subtract current user responses to get a total difference
             let totalDiff = 0;
             for (let i = 0; i < currentUserScores.length; i++) {
                 //abs val
                 totalDiff= totalDiff + (Math.abs(currentUserScores[i]-comparisonArray[i]));
             }
-            console.log(element.name + totalDiff);
+            // console.log(element.name + totalDiff);
+            if (totalDiff < leastDiff) {
+                leastDiff = totalDiff;
+            }
+
+
             //find least diff and return that user
+            console.log(leastDiff);
             
+
         }
+        
 
      })
-    
+
     
 
 }
