@@ -1,8 +1,5 @@
 const express = require('express');
 
-const path = require('path');
-
-const friends = require(path.join(__dirname,'/app/data/friends'));
 
 
 const app = express();

@@ -238,11 +238,22 @@
                     $("#q10").val()
                 ]
             }
-            console.log(newUser);
-            $.post('/api/friends', newUser).then(function(data){
-                console.log(data);
-                friends.push(newUser);
+            // console.log(newUser);
+            var currentURL = window.location.origin;
+            $.post(currentURL + "/api/friends", newUser, function(data){
+                console.log("friends object: ", data);
             });
+
+
+            
+            // console.log(currentURL);
+            //traverse data to make match
+            $.ajax({url: currentURL + '/api/friends', newUser, method: "GET"}).done(function(data){
+                // console.log(data);
+                // friends.push(newUser);
+            });
+            //post new data
+
             // function makeMatch(){
             //     friends.forEach(element => {
             //         console.log(element);

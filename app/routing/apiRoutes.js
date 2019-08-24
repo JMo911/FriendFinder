@@ -7,7 +7,7 @@ app.get("/api/friends", function(request, response) {
   });
 
 app.post("/api/friends", function(request, response){
-    const newFriend = request.body;
-    
+    friends.push(request.body);
+    response.json(friends);
 });
 }
