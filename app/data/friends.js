@@ -81,6 +81,8 @@ function findMatch(name) {
                 totalDiff= totalDiff + (Math.abs(currentUserScores[i]-comparisonArray[i]));
             }
             console.log(element.name + totalDiff);
+            //find least diff and return that user
+            
         }
 
      })
