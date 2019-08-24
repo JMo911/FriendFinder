@@ -67,11 +67,11 @@ function findMatch(name) {
 
 
 
-
+    //set least diff at max possible total diff
+    let leastDiff=50;
     
      friends.forEach(function(element){
-         //set least diff at max possible total diff
-         let leastDiff=50;
+         
 
         if (element.name !== name) {
             let comparisonArray = element.responses;
@@ -88,14 +88,28 @@ function findMatch(name) {
 
 
             //find least diff and return that user
-            console.log(leastDiff);
+            // console.log(leastDiff);
             
 
         }
-        
+        // console.log(leastDiff);
 
      })
+     console.log(leastDiff);
+     friends.forEach(function(element){
+         if (element.name !== name){
+             let comparisonArray = element.responses;
+             let totalDiff = 0;
+             for (let i = 0; i < currentUserScores.length; i++) {
+                 totalDiff = totalDiff + (Math.abs(currentUserScores[i]-comparisonArray[i]));
+             }
+             if (leastDiff === totalDiff) {
+                console.log(element.name);
+            }
+         }
 
+     });
+     
     
 
 }
