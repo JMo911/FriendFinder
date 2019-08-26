@@ -1,7 +1,7 @@
 const friends = [
     {
         "name":"Ahmed",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"https://static.vecteezy.com/system/resources/thumbnails/000/142/008/small/stylish-man-s-headshot-vector.jpg",
         "responses":[
             5,
             1,
@@ -17,7 +17,7 @@ const friends = [
     },
     {
         "name":"Jim",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"https://static.vecteezy.com/system/resources/thumbnails/000/142/008/small/stylish-man-s-headshot-vector.jpg",
         "responses":[
             3,
             2,
@@ -33,7 +33,7 @@ const friends = [
     },
     {
         "name":"Jessica",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"https://static.vecteezy.com/system/resources/thumbnails/000/142/008/small/stylish-man-s-headshot-vector.jpg",
         "responses":[
             4,
             2,

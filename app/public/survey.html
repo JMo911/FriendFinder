@@ -34,7 +34,6 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
@@ -338,6 +337,11 @@
                     if (leastDiff === totalDiff) {
                         console.log(element.name);
                         $("#exampleModalCenterTitle").text("You're new friend is: " + element.name + "!");
+                        let picDiv = $("<div>");
+                        let pic = $("<img>");
+                        pic.attr('src', element.photo);
+                        picDiv.append(pic);    
+                        $(".modal-body").append(picDiv);
                     }
                 }
 
