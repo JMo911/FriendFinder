@@ -17,7 +17,7 @@ const friends = [
     },
     {
         "name":"Jim",
-        "photo":"https://static.vecteezy.com/system/resources/thumbnails/000/142/008/small/stylish-man-s-headshot-vector.jpg",
+        "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOOe11BGGbHXVFHSFctf0DYnVpbsq9zKB06s6esC-H6KKGXu4m",
         "responses":[
             3,
             2,
@@ -33,7 +33,7 @@ const friends = [
     },
     {
         "name":"Jessica",
-        "photo":"https://static.vecteezy.com/system/resources/thumbnails/000/142/008/small/stylish-man-s-headshot-vector.jpg",
+        "photo":"https://static.vecteezy.com/system/resources/previews/000/141/732/non_2x/headshot-of-smiling-older-lady-vector.jpg",
         "responses":[
             4,
             2,
