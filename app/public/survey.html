@@ -258,21 +258,13 @@
                 $("#q9").val(),
                 $("#q10").val()
             ]
-        }
-        // console.log(newUser);
+        };
+        //CURRENT WORK*******
+        $(".custom-select").val("Choose...");
+        $("#nameInput").val("");
+        $("#photoInput").val("");
         var currentURL = window.location.origin;
         $.post(currentURL + "/api/friends", newUser, function(data){
-            // console.log("friends object: ", data);
-            data.forEach(element => {
-                const responseArrays = element.responses;
-                const numericArray = [];
-                responseArrays.forEach(element => {
-                    numericArray.push(parseInt(element));
-                });
-                //the last portion of this hw I need to complete is comparing the responses from each user by iterating over their arrays and finding the difference between their responses to question 1, question 2, question3... Then we need to sum those differences to generate a 'total difference' score. Once this is done I need to compare total differences across all users to find the smallest total difference and return that user as a match.
-                
-            });
-            // console.log(data);
             function findMatch(name) {
             let currentUser;
             data.forEach(function(element){
@@ -287,14 +279,10 @@
             //   console.log(currentUserScores);
             //now compare current user scores to all other friends' scores
 
-
-
             //set least diff at max possible total diff
             let leastDiff=50;
             
             data.forEach(function(element){
-                
-
                 if (element.name !== name) {
                     let comparisonArray = element.responses;
                     //for each comparison array i need to subtract current user responses to get a total difference
@@ -307,13 +295,9 @@
                     if (totalDiff < leastDiff) {
                         leastDiff = totalDiff;
                     }
-
-
                     //find least diff and return that user
                 }
-
             })
-            // console.log(leastDiff);
             data.forEach(function(element){
                 if (element.name !== name){
                     let comparisonArray = element.responses;
@@ -340,95 +324,6 @@
 
         findMatch(newUser.name);
         });
-        // findMath(newUser.name);
-
-
-        
-    //     $.ajax({
-    //         'url': currentURL + "/api/friends",
-    //         'method': 'GET'
-    //     }).then(function(response){
-    //         let friends = response;
-
-    //         //FIND MATCH FUNCTION
-    //         function findMatch(name) {
-    //         let currentUser;
-    //         friends.forEach(function(element){
-    //             if (element.name === name){
-    //                 currentUser = element;
-    //             }
-    //         });
-    //         let currentUserScores=[];
-    //         currentUser.responses.forEach(function(element){
-    //             currentUserScores.push(parseInt(element));
-    //         });
-    //         //   console.log(currentUserScores);
-    //         //now compare current user scores to all other friends' scores
-
-
-
-    //         //set least diff at max possible total diff
-    //         let leastDiff=50;
-            
-    //         friends.forEach(function(element){
-                
-
-    //             if (element.name !== name) {
-    //                 let comparisonArray = element.responses;
-    //                 //for each comparison array i need to subtract current user responses to get a total difference
-    //                 let totalDiff = 0;
-    //                 for (let i = 0; i < currentUserScores.length; i++) {
-    //                     //abs val
-    //                     totalDiff= totalDiff + (Math.abs(currentUserScores[i]-comparisonArray[i]));
-    //                 }
-    //                 // console.log(element.name + totalDiff);
-    //                 if (totalDiff < leastDiff) {
-    //                     leastDiff = totalDiff;
-    //                 }
-
-
-    //                 //find least diff and return that user
-    //             }
-
-    //         })
-    //         // console.log(leastDiff);
-    //         friends.forEach(function(element){
-    //             if (element.name !== name){
-    //                 let comparisonArray = element.responses;
-    //                 let totalDiff = 0;
-    //                 for (let i = 0; i < currentUserScores.length; i++) {
-    //                     totalDiff = totalDiff + (Math.abs(currentUserScores[i]-comparisonArray[i]));
-    //                 }
-    //                 if (leastDiff === totalDiff) {
-    //                     console.log(element.name);
-    //                     $("#exampleModalCenterTitle").text("You're new friend is: " + element.name + "!");
-    //                     let picDiv = $("<div>");
-    //                     let pic = $("<img>");
-    //                     pic.attr('src', element.photo);
-    //                     picDiv.append(pic);    
-    //                     $(".modal-body").append(picDiv);
-    //                 }
-    //             }
-
-    //         });
-            
-            
-
-    // }
-
-    //     findMatch(newUser.name);
-        // console.log(newUser.name);
-
-        //END OF FIND MATCH FUNCTION
-
-            
-    //     })
-
-
-
-
-
-
     });
   
 </script>
