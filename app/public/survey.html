@@ -276,12 +276,9 @@
             currentUser.responses.forEach(function(element){
                 currentUserScores.push(parseInt(element));
             });
-            //   console.log(currentUserScores);
             //now compare current user scores to all other friends' scores
-
             //set least diff at max possible total diff
             let leastDiff=50;
-            
             data.forEach(function(element){
                 if (element.name !== name) {
                     let comparisonArray = element.responses;
@@ -289,21 +286,20 @@
                     let totalDiff = 0;
                     for (let i = 0; i < currentUserScores.length; i++) {
                         //abs val
-                        totalDiff= totalDiff + (Math.abs(currentUserScores[i]-comparisonArray[i]));
+                        totalDiff += (Math.abs(currentUserScores[i]-comparisonArray[i]));
                     }
-                    // console.log(element.name + totalDiff);
                     if (totalDiff < leastDiff) {
                         leastDiff = totalDiff;
                     }
-                    //find least diff and return that user
                 }
             })
+            //compare differences from each user to the least difference, and return the user that matches the least difference
             data.forEach(function(element){
                 if (element.name !== name){
                     let comparisonArray = element.responses;
                     let totalDiff = 0;
                     for (let i = 0; i < currentUserScores.length; i++) {
-                        totalDiff = totalDiff + (Math.abs(currentUserScores[i]-comparisonArray[i]));
+                        totalDiff += (Math.abs(currentUserScores[i]-comparisonArray[i]));
                     }
                     if (leastDiff === totalDiff) {
                         console.log(element.name);
@@ -317,11 +313,7 @@
                 }
 
             });
-            
-            
-
     }
-
         findMatch(newUser.name);
         });
     });

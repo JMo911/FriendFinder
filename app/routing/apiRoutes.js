@@ -10,7 +10,5 @@ app.post("/api/friends", function(request, response){
     friends.push(request.body);
     response.json(friends);
     //BUILD OUT THE MATCH AS MY RESPONSE TO THE CLIENT HERE
-
-
 });
 }
