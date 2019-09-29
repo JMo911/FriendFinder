@@ -7,3 +7,5 @@ This app prompts users to fill out answers to predictive questions to find frien
 We use heroku and the node.js express library to  provide users with an online app to use our service and house our api. 
 <br>
 Javascript allows us to quickly compare user's answers to our survey and match them to our friend's database for compatibility.
+
+[Try us out here](https://friendsurvey.herokuapp.com/home)
